@@ -64,10 +64,10 @@ The scaffold produces drafts you review, refine, and commit alongside your sourc
 npx @tanstack/intent validate
 ```
 
-And `@tanstack/intent setup` copies CI workflow templates into your repo so validation runs automatically on every push:
+And `@tanstack/intent setup-github-actions` copies CI workflow templates into your repo so validation runs automatically on every push:
 
 ```bash
-npx @tanstack/intent setup
+npx @tanstack/intent setup-github-actions
 ```
 
 This matters because the alternative is hoping model providers eventually re-train on your latest docs. That's not a strategy. Training data has a permanent version-mixing problem: once a breaking change ships, models contain _both_ versions forever with no mechanism to disambiguate. Skills bypass this entirely. They're versioned with your package, and `npm update` brings the latest knowledge with the latest code.
